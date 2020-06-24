@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Image from 'components/atoms/Image';
+import Image from 'components/organisms/Image';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 
