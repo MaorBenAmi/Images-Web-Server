@@ -10,26 +10,31 @@ const ImagesGalleryContainer = ({ imagesStore }) => {
 	const [page, updatePage] = useState(DEFAULT_PAGINATION_PAGE);
 	const [isAllItemsLoaded, stopScroller] = useState(false);
 
-	const fetchImagesGallery = async () => {
-		const response = await imagesStore.fetchImagesList({ page });
-		const newList = [
-			...imagesList,
-			...response
-		]
-		setImagesList(newList);
+	const fetchImagesGalleryOnce = async () => {
+
+		const response = await imagesStore.fetchAllImagesList();
+
+		setImagesList(response);
+
+		updatePage(page + DEFAULT_PAGINATION_PAGE);
+	}
+
+	const fetchMoreImages = () => {
+		const response = imagesStore.getNextImages({ page });
+		setImagesList(response);
 
 		updatePage(page + DEFAULT_PAGINATION_PAGE);
 
-		if (newList.length === imagesStore.images.length) stopScroller(true);
+		if (response.length >= imagesStore.images.length) stopScroller(true);
 	}
 
 	useEffect(() => {
-		fetchImagesGallery();
+		fetchImagesGalleryOnce();
 	}, []);
 	
 	return (
-		<div className='images-gallery-container'>
-			<ImagesGallery images={imagesList} fetchImages={fetchImagesGallery} totalImages={imagesStore.images.length} isAllItemsLoaded={isAllItemsLoaded} />
+		<div className='images-gallery-container' id='images-gallery'>
+			<ImagesGallery images={imagesList} fetchImages={fetchMoreImages} totalImages={imagesStore.images.length} isAllItemsLoaded={isAllItemsLoaded} />
 		</div>
 	)
 }

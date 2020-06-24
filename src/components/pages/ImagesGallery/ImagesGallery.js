@@ -10,14 +10,13 @@ const endMessage = (<p style={{ textAlign: 'center' }}>
 
 const ImagesGallery = ({
 	images,
-	totalImages,
 	fetchImages,
 	isAllItemsLoaded
 }) => {
 
 	return (
 		<InfiniteScroll
-			dataLength={totalImages}
+			dataLength={images.length}
 			next={fetchImages}
 			hasMore={!isAllItemsLoaded}
 			loader={<h4>Loading...</h4>}
