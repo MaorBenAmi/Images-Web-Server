@@ -12,7 +12,7 @@ const ImagesFooterDetails = ({
 			<p className='image-description'>{description}</p>
 			<div className='flex-center'>
 				<HeartIcon />
-				<div class="likes">{likes}</div>
+				<div className="likes">{likes}</div>
 			</div>
 		</div>
 	)
