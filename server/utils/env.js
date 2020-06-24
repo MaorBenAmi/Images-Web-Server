@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const env = {
 	getImagesApiUrl() {
 		return process.env.NODE_APP_IMAGES_WEB_SERVER_URL;

@@ -1,0 +1,17 @@
+.image-details-container {
+	position: absolute;
+}
+
+.likes {
+	margin-left: 5px;
+}
+
+.image-details-container .image-description {
+	overflow-wrap: break-word;
+	word-break: break-word;
+	width: 150px;
+	height: 65px;
+	position: relative;
+	left: 20%;
+	overflow: auto;
+}

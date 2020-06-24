@@ -1,3 +1,15 @@
+## Images Web Server
+
+1. npm install
+2. npm run build
+3. npm run start
+
+## Assumptions:
+
+1. All images are in the same size or we will create a image croppoer for fitting the image to the div size for saving the aspect ratio of the image.
+2. Server side is giving the images in pagination (for the infinite loader), as for now it is implemented at the cient side.
+3. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
