@@ -15,3 +15,20 @@
 1. Infinite scroller is not good - for some reason its get stuck on the second page.
 2. Responsive grid - because i havn't used any library for the UI, it is responsive but i don't think in the way you want it.
 3. Probrarly I will changed the description area.
+
+## Project Structure
+
+1. server
+	* adapters - holds the adapters of the API's
+	* controllers - holds the controllers of the API's
+	* routes - define the API's end points
+	* services - business logic
+	* stores - holds the classes that make use in HTTP requests.
+
+2. client
+	* assets - holds the public assets: images, css, etc..
+	* components
+		* organisms - define our components.
+		* pages - define the app pages.
+	* stores - holds the classes that make use in HTTP requests.
+	* utils
