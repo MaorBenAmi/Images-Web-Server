@@ -8,13 +8,14 @@
 ## Assumptions:
 
 1. All images are in the same size or we will create a image croppoer for fitting the image to the div size for saving the aspect ratio of the image.
-2. Server side is giving the images in pagination (for the infinite loader), as for now it is implemented at the cient side.
+2. Infinite scroller - I have used inifinite scroller with pagination - if we want really infinite scroller i can always show the same images on the list, if that's was the meaning of the bonus point - i can quickly change it.
 
 ## Things to improve:
 
-1. Infinite scroller is not good - for some reason its get stuck on the second page.
-2. Responsive grid - because i havn't used any library for the UI, it is responsive but i don't think in the way you want it.
-3. Probrarly I will changed the description area.
+1. Responsive grid - when you resize the page, the items are getting smaller instead of keeping their size - need to modify and fix the css styles.
+2. Probrarly I will changed the description area.
+3. Move the pagination logic to the backend - create a cache that fetch once the images and than serve it to the client instead of making the pagination logic on the client.
+
 
 ## Project Structure
 
